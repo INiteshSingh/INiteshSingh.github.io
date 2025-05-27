@@ -3,8 +3,9 @@ body {
   background-image: url("assets/images/Royal.jpg");
   color: #fff;
   font-family: "Poppins", sans-serif;
+  padding: 5px;
 }
-.nav-links{
+.nav-links {
   list-style: none;
   display: flex;
   gap: 1.5vw;
@@ -23,9 +24,13 @@ li > a:hover {
 }
 .nav-links {
   display: flex;
-  margin:5vh;
+  margin: 5vh;
+  align-items: center;
 }
-
+a > img {
+  height: 6rem;
+  border-radius: 50%;
+}
 .btn-grad {
   background-image: linear-gradient(
     to right,
@@ -44,8 +49,8 @@ li > a:hover {
   color: white;
   border-radius: 10px;
   display: block;
-  border:0px;
-  margin-left:auto;
+  border: 0px;
+  margin-left: auto;
 }
 
 .btn-grad:hover {
@@ -54,17 +59,62 @@ li > a:hover {
   text-decoration: none;
 }
 
-.text-content{
-  display:flex;
+.text-content {
+  display: flex;
   flex-direction: column;
-  margin:5rem;
+  margin: 5rem;
 }
-.name{
-  font-size:5rem;
+.name {
+  font-size: 4rem;
 }
-.abt{
-  font-size:3rem;
+.abt {
+  font-size: 2rem;
 }
-.hero-section>img{
-  height:300px;
+.hero-section {
+  border: 1px solid #333446;
+  display: flex;
+  align-items: center;
+}
+.hero-section > img {
+  height: 300px;
+  margin: 30px;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  border-radius: 5px;
+}
+
+.projects-section {
+  display: flex;
+  gap: 2vw;
+  margin: 15px;
+}
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 600px;
+}
+.project span {
+  display: block;
+}
+.content {
+  background-color: #393E46;
+  padding: 5px;
+}
+.heading {
+  font-size: 2rem;
+}
+.about {
+  font-size: 1rem;
+  margin-top: 3px;
+}
+.learn-more {
+  margin-top: 15px;
+}
+.learn-more > a  {
+  font-size: 20px;
+  transition:0.5s ease all
+}
+.learn-more > a:hover{
+  text-decoration: none;
+  color:#fff;
 }
