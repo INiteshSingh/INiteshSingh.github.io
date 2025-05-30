@@ -94,9 +94,11 @@ body {
 }
 .school > img,
 .college > img {
+ width: 100%;
   max-width: 600px;
-  max-height: 400px;
+  height: auto;
   border-radius: 15px;
+  object-fit: cover;
 }
 .school,
 .college {
@@ -139,12 +141,16 @@ body {
 .insti-name {
   font-size: 30px;
 }
-footer{
- background-color: #333446;
+footer {
+  background-color: #333446;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .maincontent {
   display: flex;
   padding: 40px;
+  gap:50vw;
 }
 .footer-content {
   display: flex;
@@ -172,7 +178,7 @@ footer{
   color: #fff;
 }
 .ac {
-  background-color:;
+  background-color: ;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -183,18 +189,155 @@ footer{
 }
 
 .ac:hover {
-  box-shadow: 0px 0px 20px 5px #0E2148, 0px 10px 20px #0E2148;
+  box-shadow: 0px 0px 20px 5px #0e2148, 0px 10px 20px #0e2148;
 }
 
 .social-media {
   margin-left: auto;
   display: flex;
-  gap: 10px;
+
 }
 .social-media > a > img {
   width: 70px;
   height: 70px;
 }
-.custom-hr{
-  background-color:#2A004E
+.custom-hr {
+  background-color: #2a004e;
+}
+.copy-right{
+  align-self:center;
+  color:#7F8CAA;
+}
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .disc {
+    font-size: 1.3rem;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 3vh 2vw;
+  }
+
+  .hero-section img {
+    width: 60%;
+  }
+
+  .content {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    max-width: 90%;
+  }
+
+  .institutes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .school,
+  .college {
+    width: 90%;
+    align-items: center;
+  }
+
+  .maincontent {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 20px;
+  }
+
+  .footer-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-media {
+    margin: 20px auto 0;
+    justify-content: center;
+  }
+
+  .social-media > a > img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .lc {
+    font-size: 36px;
+  }
+
+  .lc-d {
+    font-size: 28px;
+  }
+
+  .ac {
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .copy-right {
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .disc {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .nav-links img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .hero-section img {
+    width: 80%;
+  }
+
+  .ac {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .lc {
+    font-size: 30px;
+  }
+
+  .lc-d {
+    font-size: 24px;
+  }
+
+  .social-media > a > img {
+    width: 40px;
+    height: 40px;
+  }
 }
