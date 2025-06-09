@@ -118,6 +118,9 @@ body {
   margin-top: 20px;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap; /* allow items to wrap to the next line */
+  overflow: hidden; /* prevent overflow */
+  box-sizing: border-box; /* includes padding in width/height */
 }
 .lang {
   width: 200px;
