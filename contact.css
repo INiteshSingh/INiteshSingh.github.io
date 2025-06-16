@@ -109,7 +109,7 @@ textarea {
   padding: 0.4vw;
   width: 300px;
   transition: 0.4s;
-  height: 200px;
+  height: 150px;
   width: 99%;
 }
 
@@ -119,4 +119,36 @@ textarea:hover {
 
 textarea:focus {
   box-shadow: 0 0 0 0.15vw skyblue;
+}
+.submit{
+  margin-top:20px;
+  height:35px;
+  width:90px;
+  background-color:#4DA8DA;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  font-size:large;
+  margin:0 auto;
+}
+.submit:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.i>img{
+  height:50px;
+  cursor:pointer;
+}
+.images>span{
+  font-size:22px;
+}
+.images{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding:10px;
+}
+.i{
+  display:flex;
+  gap:10px;
 }
