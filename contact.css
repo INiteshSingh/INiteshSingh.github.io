@@ -155,3 +155,67 @@ textarea:focus {
   display: flex;
   gap: 10px;
 }
+@media (max-width: 720px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-links img {
+    height: 50px;
+    width: 50px;
+    margin-left:auto;
+  }
+
+  .container {
+    position: static;
+    transform: none;
+    margin-top: 50px;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .box > form {
+    font-size: 20px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .submit {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .images {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .i {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .images > span {
+    font-size: 18px;
+  }
+}
