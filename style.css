@@ -64,6 +64,13 @@ body {
   text-decoration: none;
 }
 
+/*COntact Section That Apperars when Contact Me button is pressed*/
+.contact-info {
+  background-color: white;
+  width: 70%;
+  margin: auto;
+}
+
 /* Hero Section */
 .hero-section {
   margin-top: 8vh;
@@ -98,46 +105,40 @@ body {
 }
 
 /* Tech Stack */
-.tech-stack {
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
-  margin-top: 3rem;
-  padding: 1rem;
-  gap: 10px;
-  border-top: 2px solid #333446;
-  border-bottom: 2px solid #333446;
+.tech-stack{
+  margin:15px;
 }
-.pr {
-  margin-top: 40px;
+.box1, .box2{
+  display:flex;
 }
-.languages-libraries,
-.frameworks,
-.tools,
-.platforms {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap; /* allow items to wrap to the next line */
-  overflow: hidden; /* prevent overflow */
-  box-sizing: border-box; /* includes padding in width/height */
+.Theading{
+  font-size:36px;
 }
-.lang {
-  width: 200px;
-  height: 150px;
+.smallH{
+  font-size:30px;
+}
+.ProgLangs, .frameworks, .tools, .platforms{
+  margin:50px;
+}
+.photos{
+  margin:15px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.images{
   background-color: #333446;
+  width:;
+  padding:20px;
   border-radius: 15px;
+}
+.images a{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
+  color:#fff;
 }
-.tech-head {
-  font-size: 3rem;
-}
-.tech-stack img {
-  height: 80px;
+.images img{
+  height:50px;
 }
 /* Projects Section */
 .projects-section {
