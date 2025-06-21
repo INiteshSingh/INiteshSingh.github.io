@@ -44,10 +44,10 @@ body {
 }
 
 .contact-me{
-  height:800px;
+  height:fit-content;
   width:500px;
   border: 2px solid #fff;
-  margin:50px auto 0 auto;
+  margin:40px auto 0 auto;
   padding:20px;
 }
 
@@ -65,7 +65,6 @@ body {
 }
 
 .details>input{
-  background-color: #333446;
   padding:10px;
   border: none;
   border-radius: 15px;
@@ -74,7 +73,18 @@ body {
 }
 
 textarea{
-  background-color: #333;
   height:100px;
   width:250px;
+  border-radius: 15px;
+  padding:15px;
+}
+button{
+  height:28px;
+  width:90px;
+  background-color:#3674B5;
+  color:#fff;
+  border:none;
+  font-weight:600;
+  font-size:16px;
+  padding:5px;
 }
