@@ -81,7 +81,7 @@ hr {
 .tech-stack {
   margin-top: 6vh;
   margin-left: 3vw;
-  height:fit-content;
+  height: fit-content;
 }
 
 .heading {
@@ -110,7 +110,7 @@ hr {
 }
 
 .tech-text {
-  font-size: 7vw;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
@@ -141,7 +141,7 @@ hr {
 }
 .project-link {
   text-decoration: none;
-  color:#00bcd4;
+  color: #00bcd4;
 }
 .footer {
   background-color: #333446;
@@ -171,4 +171,48 @@ hr {
 /* for the copyright text at the bottom */
 .cright {
   font-size: 2vw;
+}
+
+@media (min-width: 600px) and (max-width:1024px) {
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size:1.5rem;
+  }
+  .nav-links i{
+    display:none;
+  }
+  .hero-content{
+    line-height: 2vw;
+  }
+  .hero{
+    display:flex;
+  }
+  .hero>img{
+    height:70%;
+    width:40%;
+  }
+  .abt{
+    font-size:2rem;
+  }
+  .name{
+    font-size: 4rem;
+  }
+  .main > button{
+    margin-left: auto;
+    font-size: 2vw;
+    height:fit-content;
+    width:fit-content;
+  }
+
+  .tech-board{
+
+  }
+  .tech-text{
+    font-size:
+  }
+  .section-heading{
+    font-size:3vw;
+  }
 }
