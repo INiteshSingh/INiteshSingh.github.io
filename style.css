@@ -42,7 +42,7 @@ body {
 .main {
   height: calc(100% - 80px);
   width: 100%;
-  margin: 2vw 2vw;
+  padding: 2vw;
 }
 .text-content {
   padding: 1.4vw;
@@ -72,8 +72,8 @@ body {
   margin: 1vh 15vw;
   padding: 10px;
 }
-.main hr {
-  margin: none;
+hr {
+  margin-top: 4vh;
   position: relative;
   left: -2vw;
 }
@@ -81,11 +81,14 @@ body {
 .tech-stack {
   margin-top: 6vh;
   margin-left: 3vw;
-  height: 100vh;
+  height:fit-content;
 }
 
 .heading {
   font-size: 8vw;
+}
+.section-heading {
+  font-size: 10vw;
 }
 
 .tech-board {
@@ -95,7 +98,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 1vh 0;
+  margin-top: 2vh;
   border-radius: 8px;
   padding: 5px;
 }
@@ -105,56 +108,41 @@ body {
 .tech-board img {
   height: 10vw;
 }
-.tehc-type {
-  margin: 5vw 4vw;
-}
+
 .tech-text {
-  font-size: 6vw;
+  font-size: 7vw;
+  font-weight: 600;
 }
 
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  padding-right: 2vw;
+  margin-bottom: 8vw;
+}
 .project {
   background-color: #393e46;
-  border-radius: 8px;
-  width: 100%;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin: 10vw 0;
-  padding: 1vw;
+  color: #fff;
 }
-
-.project img {
-  height: 40vh;
+.project > img {
   width: 90%;
-  border-radius: 8px;
+  margin-left: 4vw;
 }
-
-.heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 1rem;
+.about-project {
+  padding: 10px;
 }
-
-.about {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  line-height: 2vw;
+.project-heading {
+  font-size: 6vw;
+  font-weight: 700;
 }
-
-.learn-more {
-  margin-top: 1rem;
-}
-
-.learn-more a {
-  font-size: 1rem;
-  color: #00bcd4;
-  transition: color 0.3s ease;
-}
-
-.learn-more a:hover {
-  color: #ffffff;
+.project-link {
   text-decoration: none;
+  color:#00bcd4;
 }
-
 .footer {
   background-color: #333446;
   display: flex;
@@ -174,12 +162,13 @@ body {
   background: linear-gradient(to right, #5409da 0%, #8dd8ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size:8vw;
+  font-size: 8vw;
 }
 .right-side {
   display: flex;
 }
 
-.cright{
+/* for the copyright text at the bottom */
+.cright {
   font-size: 2vw;
 }
