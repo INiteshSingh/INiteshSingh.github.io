@@ -109,7 +109,7 @@ hr {
 }
 .tech-board {
   color: #212121;
-  margin-left:2vw;
+  margin-left: 2vw;
 }
 .tech-board img {
   height: 10vw;
@@ -182,8 +182,8 @@ hr {
 @media (min-width: 600px) and (max-width: 1024px) {
   .name {
     font-weight: 6vw;
-    margin-top:1vh;
-    margin-left:2vw;
+    margin-top: 1vh;
+    margin-left: 2vw;
     background: #4dc9e6;
     background: linear-gradient(to right, #4dc9e6 0%, #210cae 100%);
     -webkit-background-clip: text;
@@ -208,7 +208,7 @@ hr {
   .hero > img {
     height: 70%;
     width: 50%;
-    margin-left:30%;
+    margin-left: 30%;
   }
   .abt {
     font-size: 2rem;
@@ -227,7 +227,96 @@ hr {
   .section-heading {
     font-size: 3rem;
   }
-  .project{
-    width:80%;
+  .project {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .nav-links a {
+    display: block;
+    font-size: 2rem;
+  }
+  .nav-links i {
+    display: none;
+  }
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  .abt {
+    font-size: 2rem;
+  }
+  .name {
+    font-size: 4rem;
+  }
+  .text-content {
+    margin-top: 12vh;
+    padding: none;
+    font-size: 2vw;
+  }
+  .main > button {
+    display: absolute;
+    font-size: 2rem;
+    height: fit-content;
+  }
+
+  .section-heading {
+    font-size: 4rem;
+  }
+
+  .tech-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+  }
+  .images {
+    display: flex;
+  }
+  .tech-board {
+    width: 90%;
+    height: fit-content;
+  }
+
+  .tech-board img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .projects {
+    display: flex;
+  }
+  .project {
+    width: 70%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .project-heading {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .project img {
+    width: 50%;
+  }
+
+  .footer {
+    height: fit-content;
+    justify-content: space-evenly;
+    gap: 5vw;
+  }
+  .lc {
+    font-size: 4rem;
+  }
+  .right-side img {
+    height: 50px;
+    width: 50px;
+  }
+  .cright {
+    font-size: 1rem;
   }
 }
