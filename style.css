@@ -42,7 +42,7 @@ body {
 .main {
   height: calc(100% - 80px);
   width: 100%;
-  padding: 2vw;
+  /* padding: 2vw; */
 }
 .text-content {
   padding: 1.4vw;
@@ -51,6 +51,11 @@ body {
 .name {
   font-size: 8vw;
   font-weight: 700;
+  font-weight: 6vw;
+  background: #4dc9e6;
+  background: linear-gradient(to right, #4dc9e6 0%, #210cae 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .main img {
   height: 40vh;
@@ -104,6 +109,7 @@ hr {
 }
 .tech-board {
   color: #212121;
+  margin-left:2vw;
 }
 .tech-board img {
   height: 10vw;
@@ -173,46 +179,55 @@ hr {
   font-size: 2vw;
 }
 
-@media (min-width: 600px) and (max-width:1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
+  .name {
+    font-weight: 6vw;
+    margin-top:1vh;
+    margin-left:2vw;
+    background: #4dc9e6;
+    background: linear-gradient(to right, #4dc9e6 0%, #210cae 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .nav-links a {
     text-decoration: none;
     color: #fff;
     display: block;
-    font-size:1.5rem;
+    font-size: 1.5rem;
   }
-  .nav-links i{
-    display:none;
+  .nav-links i {
+    display: none;
   }
-  .hero-content{
+  .hero-content {
     line-height: 2vw;
   }
-  .hero{
-    display:flex;
+  .hero {
+    display: flex;
+    flex-direction: column;
   }
-  .hero>img{
-    height:70%;
-    width:40%;
+  .hero > img {
+    height: 70%;
+    width: 50%;
+    margin-left:30%;
   }
-  .abt{
-    font-size:2rem;
+  .abt {
+    font-size: 2rem;
   }
-  .name{
-    font-size: 4rem;
-  }
-  .main > button{
-    margin-left: auto;
+
+  .main > button {
+    margin-left: 35%;
     font-size: 2vw;
-    height:fit-content;
-    width:fit-content;
+    height: 6vh;
+    width: fit-content;
   }
 
-  .tech-board{
-
+  .tech-text {
+    font-size: 2rem;
   }
-  .tech-text{
-    font-size:
+  .section-heading {
+    font-size: 3rem;
   }
-  .section-heading{
-    font-size:3vw;
+  .project{
+    width:80%;
   }
 }
