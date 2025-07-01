@@ -12,7 +12,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x: hidden;
-  background-image: url("assets/images/Royal.jpg");
+  background-image: url("../assets/images/Royal.jpg");
 }
 .container {
   height: 100%;
@@ -99,7 +99,7 @@ hr {
 .tech-board {
   height: fit-content;
   width: 90%;
-  background-image: url("assets/images/light_grey_dots_background.jpg");
+  background-image: url("../assets/images/light_grey_dots_background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,6 +107,7 @@ hr {
   border-radius: 8px;
   padding: 5px;
 }
+
 .tech-board {
   color: #212121;
   margin-left: 2vw;
@@ -318,5 +319,60 @@ hr {
   }
   .cright {
     font-size: 1rem;
+  }
+}
+@media (min-width:1439px){
+  .nav-links i{
+    display: none;
+  }
+  .nav-links a{
+    display:inline;
+    font-size:2vw;
+  }
+  .text-content{
+    font-size:3rem;
+  }
+  .hero{
+    display:flex;
+  }
+  .name{
+    font-size:4vw;
+  }
+  .hero button{
+    font-size:2rem;
+    height:4vw;
+  }
+  .text-content{
+    display:flex;
+    flex-direction:column;
+    gap:-2px;
+    position:relative;
+    height:100vh
+  }
+  .text-content button{
+    position:absolute;
+    right:0;
+    top:60%;
+    font-weight: 600;
+  }
+  .section-heading{
+    font-size:4vw;
+  }
+
+  .tech-text{
+    font-size:2vw;
+  }
+  .tech-board{
+    display: flex;
+    flex-wrap: wrap;
+    gap:4vw;
+    height:40%;
+    width:90%;
+  }
+  .images>img{
+    height:50px;
+  }
+  .images{
+    border:2px solid grey;
   }
 }
