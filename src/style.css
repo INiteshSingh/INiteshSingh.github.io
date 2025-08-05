@@ -144,3 +144,59 @@ header .image img{
   margin:auto;
 } */
 
+section .header{
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.projects{
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2rem;
+}
+
+.projects .card{
+  background-color: #27272a;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.projects .card:hover{
+  background-color: #323232;
+}
+
+.projects .card span{
+  display: inline-block;
+  background-color: #1e40af;
+  padding: 2px 9px;
+  font-size: 1.75rem;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.projects .card h4{
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size:1.2rem;
+  font-weight: 600;
+}
+
+.projects .card p{
+  color:#ccc;
+  margin-bottom: 1rem;
+}
+
+.projects .card a{
+  color: #fff;
+  transition:all 0.3s ease;
+}
+
+.projects .card a:hover{
+  color:#1e40af;
+}
