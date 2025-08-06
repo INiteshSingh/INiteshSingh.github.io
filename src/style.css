@@ -152,6 +152,10 @@ section .header{
   font-weight: 600;
 }
 
+.container{
+  height: 100vh;
+}
+
 .projects{
   margin-top: 4rem;
   display: grid;
@@ -199,4 +203,93 @@ section .header{
 
 .projects .card a:hover{
   color:#1e40af;
+}
+
+.tech-stack{
+  max-width: 1200px;
+  margin:auto;
+  padding: 5rem 2rem;
+  height: 100vh;
+}
+
+.tech-stack h2{
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.tech-board{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.images{
+  display: flex;
+  gap:2rem;
+}
+.images img{
+  width: 80px;
+}
+.images span{
+  display: block;
+}
+.tech-type{
+  display: flex;
+  flex-direction: column;
+}
+.tech{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:3rem;
+}
+.tech span{
+  font-size:1.25rem;
+  color:#fff;
+}
+
+.about{
+  display: flex;
+  margin: auto;
+  height:100vh;
+  max-width: 1200px;
+  align-items: center;
+  gap:2rem;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 10px;
+}
+.left button{
+  display: inline-block;
+  background-color: #1d4ed8;
+  margin: auto;
+  width:180px;
+  padding:5px;
+  border-radius: 5px;
+  height: 50px;
+}
+.about-btns{
+  display: flex;
+  margin-top: 2rem;
+}
+.left button a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+.left button a:hover{
+  color:#1d4ed8;
+  transition: all 0.3s ease;
+}
+.left h1,p{
+  color:#fff;
+}
+.right img{
+  width: 300px;
+  border-radius: 50%;
 }
