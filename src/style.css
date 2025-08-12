@@ -302,6 +302,7 @@ header .content p {
 
 .right img{
   border-radius: 50%;
+  margin-top: 5rem;
 }
 footer {
   position: relative;
