@@ -300,6 +300,9 @@ header .content p {
   color: #fff;
 }
 
+.right img{
+  border-radius: 50%;
+}
 footer {
   position: relative;
   display: grid;
