@@ -27,6 +27,70 @@ body {
   color: #fff;
 }
 
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(29, 78, 216, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(29, 78, 216, 0.8);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-left {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.animate-fade-right {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
 nav {
   max-width: 1200px;
   margin: auto;
@@ -43,6 +107,11 @@ nav {
 
 .nav-logo img {
   border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.1);
 }
 
 .nav-links {
@@ -56,6 +125,11 @@ nav {
   position: relative;
   padding-bottom: 0.75rem;
   color: #fff;
+  transition: all 0.3s ease;
+}
+
+.link a:hover {
+  color: #1d4ed8;
 }
 
 .link a::after {
@@ -65,7 +139,7 @@ nav {
   width: 0;
   bottom: 0;
   left: 0;
-  background-color: #1d4ed8;
+  background: linear-gradient(90deg, #1d4ed8, #60a5fa);
   transition: all 0.3s ease;
 }
 
@@ -73,18 +147,39 @@ nav {
   width: 70%;
 }
 
+/* Gradient Button */
 .btn {
   padding: 1rem 2rem;
   font-size: 1rem;
   color: #fff;
-  background-color: #1d4ed8;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn:hover {
-  background-color: #1e40af;
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(29, 78, 216, 0.3);
 }
 
 .container {
@@ -117,7 +212,15 @@ header .content h1 {
   line-height: 4rem;
 }
 
-header .content h1 span {
+header .content h1 span.gradient-text {
+  background: linear-gradient(135deg, #1d4ed8, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse 3s ease infinite;
+}
+
+header .content h1 span.outline {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
 }
@@ -125,6 +228,8 @@ header .content h1 span {
 header .content p {
   margin-bottom: 2rem;
   color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .header {
@@ -133,12 +238,23 @@ header .content p {
   text-align: center;
   font-size: 2.25rem;
   font-weight: 600;
+  position: relative;
 }
 
-/* Removed min-height from sections */
+.header::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1d4ed8, #60a5fa);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
 #projects-section,
 #tech-stack-section,
-#about-me-section {
+#about-me-section,
+#contact-section {
   padding: 5rem 2rem;
 }
 
@@ -151,82 +267,191 @@ header .content p {
 
 .projects .card {
   background-color: #27272a;
-  padding: 1rem;
+  padding: 1.5rem;
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1d4ed8, #60a5fa);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.projects .card:hover::before {
+  transform: scaleX(1);
 }
 
 .projects .card:hover {
   background-color: #323232;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(29, 78, 216, 0.2);
 }
 
 .projects .card span {
   display: inline-block;
-  background-color: #1e40af;
-  padding: 2px 9px;
-  font-size: 1.75rem;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  padding: 10px 15px;
+  font-size: 2rem;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .projects .card h4 {
   margin-bottom: 0.5rem;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
 .projects .card p {
   color: #ccc;
   margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .projects .card a {
-  color: #fff;
+  color: #60a5fa;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .projects .card a:hover {
-  color: #1e40af;
+  color: #93c5fd;
+  gap: 1rem;
 }
 
 .tech-board {
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Added a gap for spacing */
-  margin-top: 4rem;
+  gap: 1.5rem;
+  margin-top: 3rem;
 }
 
 .images {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .images img {
-  width: 80px;
+  width: 50px;
+  height: 50px;
 }
 
-.images span {
-  display: block;
-}
-
-.tech-type {
-  display: flex;
-  flex-direction: column;
+.tech-type h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .tech {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.25rem;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  min-width: 70px;
+}
+
+.tech:hover {
+  background-color: rgba(29, 78, 216, 0.1);
+  transform: translateY(-3px);
+}
+
+.tech img {
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.tech:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(29, 78, 216, 0.4));
 }
 
 .tech span {
-  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
   color: #fff;
+  font-weight: 500;
+}
+
+/* Circular Skill Indicators */
+.skill-circular {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.skill-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.skill-circle svg {
+  transform: rotate(-90deg);
+}
+
+.skill-circle circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.skill-circle .bg {
+  stroke: #27272a;
+}
+
+.skill-circle .progress {
+  stroke: url(#gradient);
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1.5s ease;
+}
+
+.skill-circle .percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.skill-circle .label {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #ccc;
+  white-space: nowrap;
 }
 
 .about {
@@ -234,21 +459,14 @@ header .content p {
   margin: auto;
   max-width: 1200px;
   align-items: center;
-  gap: 2rem;
-}
-
-.heading {
-  font-size: 2.25rem;
-  font-weight: 400;
-  margin: 2rem auto;
-  color: #fff;
+  gap: 3rem;
 }
 
 .left {
   display: flex;
   flex-direction: column;
   margin: auto;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
 }
 
@@ -262,19 +480,35 @@ header .content p {
   border-radius: 50%;
 }
 
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .left button {
   display: inline-block;
-  background-color: #1d4ed8;
-  width: 180px;
-  padding: 5px;
-  border-radius: 5px;
-  height: 50px;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  width: 200px;
+  padding: 8px;
+  border-radius: 8px;
+  height: 55px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.left button:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(29, 78, 216, 0.3);
 }
 
 .about-btns {
   display: flex;
   margin-top: 2rem;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .left button a {
@@ -285,14 +519,11 @@ header .content p {
   align-items: center;
   justify-content: center;
   height: 100%;
+  gap: 0.5rem;
 }
 
 .left button a i {
   margin-right: 0.5rem;
-}
-
-.left button:hover {
-  background-color: #1e40af;
 }
 
 .left h1,
@@ -300,15 +531,131 @@ header .content p {
   color: #fff;
 }
 
-.right img{
+.right img {
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
-  margin-top: 5rem;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  border: 4px solid transparent;
+  background: linear-gradient(135deg, #1d4ed8, #60a5fa, #a855f7) border-box;
 }
+
+.right img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(29, 78, 216, 0.3);
+}
+
+/* Contact Section */
+#contact-section {
+  background: linear-gradient(180deg, transparent, rgba(29, 78, 216, 0.1), transparent);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.contact-info p {
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(39, 39, 42, 0.5);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background-color: rgba(39, 39, 42, 0.8);
+  transform: translateX(10px);
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #60a5fa;
+}
+
+.contact-item span {
+  color: #ccc;
+}
+
+.contact-form {
+  background-color: rgba(39, 39, 42, 0.5);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
 footer {
   position: relative;
   display: grid;
   grid-template-columns: 400px repeat(3, 1fr);
   gap: 2rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, transparent, rgba(29, 78, 216, 0.05));
 }
 
 footer .column .logo {
@@ -319,6 +666,31 @@ footer .column .logo {
 footer .column p {
   color: #ccc;
   margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+footer .column h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+footer .column ul {
+  list-style: none;
+}
+
+footer .column ul li {
+  margin-bottom: 0.75rem;
+}
+
+footer .column ul li a {
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+footer .column ul li a:hover {
+  color: #60a5fa;
+  padding-left: 5px;
 }
 
 footer .column .socials {
@@ -330,27 +702,40 @@ footer .column .socials {
 footer .column .socials a {
   color: #ccc;
   border: 1px solid #ccc;
-  padding: 5px 10px;
-  border-radius: 100%;
+  padding: 10px 12px;
+  border-radius: 50%;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .column .socials a:hover {
   color: #fff;
-  background-color: #1d4ed8;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
   border-color: #1d4ed8;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(29, 78, 216, 0.3);
 }
 
 .copyright {
   max-width: 1200px;
   margin: auto;
-  padding: 1rem;
-  color: #fff;
-  font-size: 0.8rem;
+  padding: 1.5rem;
+  color: #888;
+  font-size: 0.9rem;
   text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Tablet and small laptop screens */
+@media (max-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 900px) {
   .nav-links {
     display: none;
@@ -375,7 +760,7 @@ footer .column .socials a:hover {
   }
 
   .left img {
-  border-radius: 50%;
+    border-radius: 50%;
   }
 
   .about {
@@ -386,6 +771,9 @@ footer .column .socials a:hover {
 
   .about .right img {
     width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 0;
   }
 
   .about-btns {
@@ -394,9 +782,22 @@ footer .column .socials a:hover {
 
   footer {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     text-align: center;
     justify-items: center;
+  }
+
+  .skill-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skill-circle .percent {
+    font-size: 0.9rem;
+  }
+
+  .tech-type h2 {
+    font-size: 1.2rem;
   }
 }
 
@@ -422,11 +823,25 @@ footer .column .socials a:hover {
 
   .images {
     justify-content: center;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .images img {
-    width: 60px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .tech-type h2 {
+    font-size: 1.1rem;
+  }
+
+  .tech {
+    padding: 0.5rem;
+    min-width: 60px;
+  }
+
+  .tech span {
+    font-size: 0.65rem;
   }
 
   .about-btns {
@@ -434,15 +849,35 @@ footer .column .socials a:hover {
     gap: 1rem;
     align-items: center;
   }
+
   .left img {
-  border-radius: 50%;
-}
+    border-radius: 50%;
+  }
+
   footer {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .copyright {
-    font-size: 0.7rem;
-    padding: 0.5rem;
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  .skill-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skill-circle .percent {
+    font-size: 0.9rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
   }
 }

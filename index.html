@@ -26,15 +26,16 @@
         <li class="link"><a href="#projects-section">Projects</a></li>
         <li class="link"><a href="#tech-stack-section">Tech Stack</a></li>
         <li class="link"><a href="#about-me-section">About</a></li>
+        <li class="link"><a href="#contact-section">Contact</a></li>
       </ul>
       <button class="btn">Hire Me</button>
     </nav>
 
-    <header class="container">
+    <header class="container animate-fade-up">
       <div class="content">
         <span class="blur"></span>
         <span class="blur"></span>
-        <h1>Hi, I'm <span>Nitesh</span>, Full Stack Python Developer</h1>
+        <h1>Hi, I'm <span class="gradient-text">Nitesh</span>, Full Stack Python Developer</h1>
         <p>
           From Responsive Dashboards to Real Time Full Stack Applications, i can get it all done.
         </p>
@@ -46,7 +47,7 @@
     </header>
 
     <section class="container" id="projects-section">
-      <h2 class="header">My Projects</h2>
+      <h2 class="header animate-fade-up">My Projects</h2>
       <div class="projects" id="projects">
         <div class="card">
           <span><i class="ri-tools-line"></i></span>
@@ -95,10 +96,32 @@
     </section>
 
     <section class="container" id="tech-stack-section">
-      <h2 class="header">My Tech Stack</h2>
+      <h2 class="header animate-fade-up">My Tech Stack</h2>
       <div class="tech-board">
         <div class="tech-type">
-          <h2>Core Language's</h2>
+          <h2>Frontend Technologies</h2>
+          <div class="images">
+            <div class="tech">
+              <img src="assets/images/Icons/html.svg" />
+              <span>HTML5</span>
+            </div>
+            <div class="tech">
+              <img src="assets/images/Icons/css.svg" />
+              <span>CSS3</span>
+            </div>
+            <div class="tech">
+              <img src="assets/images/Icons/js.svg" />
+              <span>JavaScript</span>
+            </div>
+            <div class="tech">
+              <img src="assets/images/Icons/Bootstrap 5.svg" />
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-type">
+          <h2>Backend Technologies</h2>
           <div class="images">
             <div class="tech">
               <img src="assets/images/Icons/python-svgrepo-com.svg" />
@@ -109,53 +132,90 @@
               <span>C++</span>
             </div>
             <div class="tech">
-              <img src="assets/images/Icons/dart.svg" />
-              <span>Dart</span>
-            </div>
-            <div class="tech">
               <img src="assets/images/Icons/go-6.svg" />
               <span>Go</span>
             </div>
+            <div class="tech">
+              <img src="assets/images/Icons/dart.svg" />
+              <span>Dart</span>
+            </div>
           </div>
         </div>
-        
-        <div class="tech-type">
-          <h2>Frontend Technologies</h2>
-          <div class="images">
-            <div class="tech">
-              <img src="assets/images/Icons/html.svg" />
-              <span>Html 5</span>
-            </div>
-            <div class="tech">
-              <img src="assets/images/Icons/css.svg" />
-              <span>Css 3</span>
-            </div>
-            <div class="tech">
-              <img src="assets/images/Icons/js.svg" />
-              <span>Javascript</span>
-            </div>
-            <div class="tech">
-              <img src="assets/images/Icons/Bootstrap 5.svg" />
-              <span>Bootstrap</span>
-            </div>
-          </div>
-        </div>      
 
         <div class="tech-type">
-          <h2>Libraries</h2>
+          <h2>Frameworks & Libraries</h2>
           <div class="images">
             <div class="tech">
+              <img src="assets/images/Icons/django.svg" />
+              <span>Django</span>
+            </div>
+            <div class="tech">
               <img src="assets/images/Icons/numpy-svgrepo-com.svg" />
-              <span>Numpy</span>
+              <span>NumPy</span>
             </div>
             <div class="tech">
               <img src="assets/images/Icons/Pandas.svg" />
               <span>Pandas</span>
             </div>
-            <div class="tech">
-              <img src="assets/images/Icons/django.svg" />
-              <span>Django</span>
-            </div>
+          </div>
+        </div>
+
+        <div class="skill-circular">
+          <svg width="0" height="0">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1d4ed8" />
+                <stop offset="100%" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="50"></circle>
+              <circle class="progress" cx="60" cy="60" r="50" data-percent="90"></circle>
+            </svg>
+            <span class="percent">90%</span>
+            <span class="label">Python</span>
+          </div>
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="50"></circle>
+              <circle class="progress" cx="60" cy="60" r="50" data-percent="75"></circle>
+            </svg>
+            <span class="percent">75%</span>
+            <span class="label">Django</span>
+          </div>
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="50"></circle>
+              <circle class="progress" cx="60" cy="60" r="50" data-percent="80"></circle>
+            </svg>
+            <span class="percent">80%</span>
+            <span class="label">JavaScript</span>
+          </div>
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="50"></circle>
+              <circle class="progress" cx="60" cy="60" r="50" data-percent="70"></circle>
+            </svg>
+            <span class="percent">70%</span>
+            <span class="label">SQL</span>
+          </div>
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="50"></circle>
+              <circle class="progress" cx="60" cy="60" r="50" data-percent="65"></circle>
+            </svg>
+            <span class="percent">65%</span>
+            <span class="label">React</span>
+          </div>
+          <div class="skill-circle">
+            <svg width="120" height="120">
+              <circle class="bg" cx="60" cy="60" r="50"></circle>
+              <circle class="progress" cx="60" cy="60" r="50" data-percent="85"></circle>
+            </svg>
+            <span class="percent">85%</span>
+            <span class="label">HTML/CSS</span>
           </div>
         </div>
       </div>
@@ -164,7 +224,7 @@
     <section class="container" id="about-me-section">
       <div class="about">
         <div class="left">
-          <span class="heading">About Me</span>
+          <span class="heading animate-fade-up">About Me</span>
           <h1>Hi, I'm Thakur Nitesh Singh 👋</h1>
           <p>Motivated and aspiring full-stack Python developer with foundational knowledge in both front-end
             and back-end technologies. Adept at creating responsive user interfaces with HTML, CSS,
@@ -180,9 +240,48 @@
         </div>
 
         <div class="right">
-          <img src="assets/images/linkedinPhoto.jpeg" />
+          <img src="assets/images/linkedinPhoto.jpeg" alt="Photo">
         </div>
       </div >
+    </section>
+
+    <section class="container" id="contact-section">
+      <h2 class="header animate-fade-up">Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Let's work together!</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="ri-mail-line"></i>
+              <span>nitesh.singh@example.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="ri-phone-line"></i>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <i class="ri-map-pin-line"></i>
+              <span>India</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
     </section>
 
     <footer class="container">
@@ -194,9 +293,37 @@
         </div>
         <p>Learn - Code - Learn - Repeat That's what i do.</p>
         <div class="socials">
-          <a href="https://x.com/i_Nitesh_S"  target="_blank"><i class="ri-twitter-x-line"></i></a>
+          <a href="https://github.com/INiteshSingh" target="_blank"><i class="ri-github-fill"></i></a>
+          <a href="https://x.com/i_Nitesh_S" target="_blank"><i class="ri-twitter-x-line"></i></a>
           <a href="https://www.linkedin.com/in/nitesh-singh-875794253/" target="_blank"><i class="ri-linkedin-line"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="ri-instagram-line"></i></a>
         </div>
+      </div>
+      <div class="column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#tech-stack-section">Tech Stack</a></li>
+          <li><a href="#about-me-section">About</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="#">Acer-Expense Tracker</a></li>
+          <li><a href="#">QR-Based Attendance</a></li>
+          <li><a href="#">Know Your Weather</a></li>
+          <li><a href="#">Currency Exchange</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:nitesh.singh@example.com">nitesh.singh@example.com</a></li>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="#contact-section">Send a message</a></li>
+        </ul>
       </div>
     </footer>
     
