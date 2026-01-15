@@ -6,6 +6,7 @@
   outline: none;
   border: none;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 img {
@@ -18,7 +19,7 @@ a {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -191,42 +192,30 @@ header .content p {
   color: #1e40af;
 }
 
-.tech-board {
+/* 
+TECH STACK CSS 
+*/
+
+.tech-stack{
+  overflow: hidden;
+  gap: 25px;
+}
+
+.tech-items{
+  border: 2px solid white;
   display: flex;
-  flex-direction: column;
-  gap: 2rem; /* Added a gap for spacing */
-  margin-top: 4rem;
+
 }
 
-.images {
+.tech-lang{
+  border: 2px solid green;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.images img {
-  width: 80px;
-}
-
-.images span {
-  display: block;
-}
-
-.tech-type {
-  display: flex;
-  flex-direction: column;
-}
-
-.tech {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
 }
 
-.tech span {
-  font-size: 1.25rem;
-  color: #fff;
+.tech-lang > img{
+  height: 80px;
 }
 
 .about {
