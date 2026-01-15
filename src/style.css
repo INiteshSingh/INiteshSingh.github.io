@@ -6,6 +6,7 @@
   outline: none;
   border: none;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 img {
@@ -18,7 +19,7 @@ a {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -337,8 +338,15 @@ header .content p {
 .tech-board {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 3rem;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.tech-items {
+  border: 2px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .images {
@@ -349,8 +357,16 @@ header .content p {
 }
 
 .images img {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+}
+
+.images span {
+  display: block;
+}
+
+.tech-type {
+  display: flex;
+  flex-direction: column;
 }
 
 .tech-type h2 {
@@ -398,7 +414,6 @@ header .content p {
   font-weight: 500;
 }
 
-/* Circular Skill Indicators */
 .skill-circular {
   display: flex;
   flex-wrap: wrap;
@@ -441,7 +456,6 @@ header .content p {
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
   font-weight: 600;
-  color: #fff;
 }
 
 .skill-circle .label {
